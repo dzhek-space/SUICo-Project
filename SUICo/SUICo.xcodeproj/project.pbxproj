@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		9E30473724925B1A00CA1FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30473624925B1A00CA1FBD /* AppDelegate.swift */; };
 		9E30473924925B1A00CA1FBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30473824925B1A00CA1FBD /* SceneDelegate.swift */; };
-		9E30473B24925B1A00CA1FBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30473A24925B1A00CA1FBD /* ContentView.swift */; };
 		9E30473D24925B1E00CA1FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E30473C24925B1E00CA1FBD /* Assets.xcassets */; };
 		9E30474024925B1E00CA1FBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E30473F24925B1E00CA1FBD /* Preview Assets.xcassets */; };
 		9E30474324925B1E00CA1FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E30474124925B1E00CA1FBD /* LaunchScreen.storyboard */; };
+		9E30474B24927A2D00CA1FBD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30474A24927A2D00CA1FBD /* MainTabView.swift */; };
+		9E30474E249384E000CA1FBD /* UIApplication+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30474D249384E000CA1FBD /* UIApplication+Keyboard.swift */; };
+		9E3047502493928700CA1FBD /* UserNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30474F2493928700CA1FBD /* UserNameTextField.swift */; };
+		9E3047522493E1E500CA1FBD /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3047512493E1E500CA1FBD /* Background.swift */; };
+		9EA3AE2C2494007C00D87AFD /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA3AE2B2494007C00D87AFD /* FavoritesView.swift */; };
+		9EA3AE2E24940BD600D87AFD /* SearchTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA3AE2D24940BD600D87AFD /* SearchTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9E30473324925B1A00CA1FBD /* SUICo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUICo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E30473624925B1A00CA1FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E30473824925B1A00CA1FBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9E30473A24925B1A00CA1FBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E30473C24925B1E00CA1FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E30473F24925B1E00CA1FBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E30474224925B1E00CA1FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E30474424925B1E00CA1FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E30474A24927A2D00CA1FBD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		9E30474D249384E000CA1FBD /* UIApplication+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Keyboard.swift"; sourceTree = "<group>"; };
+		9E30474F2493928700CA1FBD /* UserNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextField.swift; sourceTree = "<group>"; };
+		9E3047512493E1E500CA1FBD /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		9EA3AE2B2494007C00D87AFD /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		9EA3AE2D24940BD600D87AFD /* SearchTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +68,12 @@
 			children = (
 				9E30473624925B1A00CA1FBD /* AppDelegate.swift */,
 				9E30473824925B1A00CA1FBD /* SceneDelegate.swift */,
-				9E30473A24925B1A00CA1FBD /* ContentView.swift */,
+				9E30474A24927A2D00CA1FBD /* MainTabView.swift */,
+				9EA3AE2D24940BD600D87AFD /* SearchTab.swift */,
+				9E3047512493E1E500CA1FBD /* Background.swift */,
+				9E30474F2493928700CA1FBD /* UserNameTextField.swift */,
+				9EA3AE2B2494007C00D87AFD /* FavoritesView.swift */,
+				9E30474C249384A200CA1FBD /* Extension */,
 				9E30473C24925B1E00CA1FBD /* Assets.xcassets */,
 				9E30474124925B1E00CA1FBD /* LaunchScreen.storyboard */,
 				9E30474424925B1E00CA1FBD /* Info.plist */,
@@ -73,6 +88,14 @@
 				9E30473F24925B1E00CA1FBD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9E30474C249384A200CA1FBD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9E30474D249384E000CA1FBD /* UIApplication+Keyboard.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E30474E249384E000CA1FBD /* UIApplication+Keyboard.swift in Sources */,
+				9E3047522493E1E500CA1FBD /* Background.swift in Sources */,
+				9E3047502493928700CA1FBD /* UserNameTextField.swift in Sources */,
 				9E30473724925B1A00CA1FBD /* AppDelegate.swift in Sources */,
+				9EA3AE2C2494007C00D87AFD /* FavoritesView.swift in Sources */,
 				9E30473924925B1A00CA1FBD /* SceneDelegate.swift in Sources */,
-				9E30473B24925B1A00CA1FBD /* ContentView.swift in Sources */,
+				9E30474B24927A2D00CA1FBD /* MainTabView.swift in Sources */,
+				9EA3AE2E24940BD600D87AFD /* SearchTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
