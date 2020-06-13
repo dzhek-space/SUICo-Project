@@ -12,6 +12,12 @@ struct SearchTab: View {
     
     @State var selection: Int? = nil
     @State var username: String = ""
+    var usernameIsEntered: Bool { !username.isEmpty }
+    @State var attempts: Int = 0 {
+        willSet {
+            print(newValue)
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -23,12 +29,14 @@ struct SearchTab: View {
                         .frame(width: 200, height: 200)
                         .padding(.top, 80)
                         .padding(.bottom, 48)
-                    UserNameTextField(textInput: $username, action: showFavorites)
+                    UserNameTextField(textInput: $username,
+                                      action: usernameIsEntered ? showFavorites : shakeIt )
                         .padding(.horizontal, 50)
+                        .modifier(Shake(animatableData: CGFloat(attempts)))
                     Spacer()
                     NavigationLink(destination: FavoritesView(title: username), tag: 1, selection: $selection) {
                         
-                        Button(action: showFavorites) {
+                        Button(action: usernameIsEntered ? showFavorites : shakeIt) {
                             Text("Get Followers")
                                 .font(.headline)
                                 .foregroundColor(.white)
@@ -54,6 +62,7 @@ struct SearchTab: View {
     }
     
     private func showFavorites() { selection = 1 }
+    private func shakeIt() { withAnimation(.default){ self.attempts += 1 } }
     
     private func endEditing() {
         UIApplication.shared.endEditing()
@@ -64,5 +73,19 @@ struct SearchTab: View {
 struct SearchTab_Previews: PreviewProvider {
     static var previews: some View {
         SearchTab()
+    }
+}
+
+// MARK: - Helpers: Shake Effect
+
+struct Shake: GeometryEffect {
+    var amount: CGFloat = 10
+    var shakesPerUnit = 3
+    var animatableData: CGFloat
+
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        ProjectionTransform(CGAffineTransform(translationX:
+            amount * sin(animatableData * .pi * CGFloat(shakesPerUnit)),
+            y: 0))
     }
 }
