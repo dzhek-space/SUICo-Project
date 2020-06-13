@@ -69,9 +69,7 @@
 				9E30473624925B1A00CA1FBD /* AppDelegate.swift */,
 				9E30473824925B1A00CA1FBD /* SceneDelegate.swift */,
 				9E30474A24927A2D00CA1FBD /* MainTabView.swift */,
-				9EA3AE2D24940BD600D87AFD /* SearchTab.swift */,
-				9E3047512493E1E500CA1FBD /* Background.swift */,
-				9E30474F2493928700CA1FBD /* UserNameTextField.swift */,
+				9EC9652C2495610A009531EF /* SearchTabView */,
 				9EA3AE2B2494007C00D87AFD /* FavoritesView.swift */,
 				9E30474C249384A200CA1FBD /* Extension */,
 				9E30473C24925B1E00CA1FBD /* Assets.xcassets */,
@@ -96,6 +94,16 @@
 				9E30474D249384E000CA1FBD /* UIApplication+Keyboard.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9EC9652C2495610A009531EF /* SearchTabView */ = {
+			isa = PBXGroup;
+			children = (
+				9EA3AE2D24940BD600D87AFD /* SearchTab.swift */,
+				9E3047512493E1E500CA1FBD /* Background.swift */,
+				9E30474F2493928700CA1FBD /* UserNameTextField.swift */,
+			);
+			path = SearchTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

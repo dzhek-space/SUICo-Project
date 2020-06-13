@@ -45,9 +45,9 @@ struct ContributionGraph: View {
     var body: some View {
         
         HStack(spacing: 0) {
-            ForEach( 0 ..< columns ) {_ in
+            ForEach( 0 ..< columns ) { _ in
                 VStack(spacing: 0) {
-                    ForEach( 0 ..< self.rows ) {_ in
+                    ForEach( 0 ..< self.rows ) { _ in
                         ZStack {
                             RoundedRectangle(cornerRadius: 4, style: .continuous)
                                 .fill(Color(.systemGray6))

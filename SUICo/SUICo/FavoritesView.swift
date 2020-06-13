@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    
+    var title: String
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -17,12 +20,12 @@ struct FavoritesView: View {
             }
             .edgesIgnoringSafeArea([.top, .bottom])
         }
-        .navigationBarTitle("Favorites", displayMode: .automatic)
+        .navigationBarTitle(Text(title), displayMode: .automatic)
     }
 }
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritesView()
+        FavoritesView(title: "Some Title")
     }
 }

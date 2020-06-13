@@ -11,6 +11,7 @@ import SwiftUI
 struct SearchTab: View {
     
     @State var selection: Int? = nil
+    @State var username: String = ""
     
     var body: some View {
         NavigationView {
@@ -22,15 +23,12 @@ struct SearchTab: View {
                         .frame(width: 200, height: 200)
                         .padding(.top, 80)
                         .padding(.bottom, 48)
-                    UserNameTextField()
+                    UserNameTextField(textInput: $username, action: showFavorites)
                         .padding(.horizontal, 50)
                     Spacer()
-                    NavigationLink(destination: FavoritesView(), tag: 1, selection: $selection) {
+                    NavigationLink(destination: FavoritesView(title: username), tag: 1, selection: $selection) {
                         
-                        Button(action: {
-                            print("login tapped")
-                            self.selection = 1
-                        }) {
+                        Button(action: showFavorites) {
                             Text("Get Followers")
                                 .font(.headline)
                                 .foregroundColor(.white)
@@ -43,16 +41,6 @@ struct SearchTab: View {
                             )
                         }
                         
-//                        Text("Get Followers")
-//                            .font(.headline)
-//                            .foregroundColor(.white)
-//                            .padding()
-//                            .frame(height: 50)
-//                            .frame(maxWidth: .infinity)
-//                            .background(
-//                                RoundedRectangle(cornerRadius: 12, style: .continuous)
-//                                    .fill(Color.green)
-//                        )
                     }
                     .padding(.horizontal, 50)
                     .padding(.bottom, 50)
@@ -64,6 +52,8 @@ struct SearchTab: View {
         }
 
     }
+    
+    private func showFavorites() { selection = 1 }
     
     private func endEditing() {
         UIApplication.shared.endEditing()
